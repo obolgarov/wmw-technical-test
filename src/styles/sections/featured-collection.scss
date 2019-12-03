@@ -5,5 +5,11 @@
  *
  */
 .featured-collection {
-  
+  position: relative;
+  width: 100%;
+
+  & > * {
+    width: 284px;
+    margin: 0 auto;
+  }
 }

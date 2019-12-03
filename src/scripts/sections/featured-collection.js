@@ -8,6 +8,8 @@
  */
 import {register} from '@shopify/theme-sections';
 
+import Flickity from 'flickity';
+
 /**
  * Featured collection constructor
  * Executes on page load as well as Theme Editor `section:load` events.
@@ -15,9 +17,12 @@ import {register} from '@shopify/theme-sections';
  * @param {string} container - selector for the section container DOM element
  */
 register('featured-collection', {
-
   init() {
     window.console.log('Initialising featured collection section');
+    const flickity = new Flickity('.collection-carousel', {
+      groupCells: '100%',
+    });
+    window.console.log(flickity);
   },
 
   publicMethod() {
